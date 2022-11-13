@@ -1,0 +1,24 @@
+@font-face {
+    font-family: '2PeasChampgagne';
+    src: url(2Peas-Champagne.ttf)
+}
+
+body {
+    font-family: '2PeasChampgagne';
+    background-image: url(natural-white-marble-texture.jpg);
+    margin-left: 70px;
+    margin-right: 50px;
+}
+
+img {
+    border-radius: 50px;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}

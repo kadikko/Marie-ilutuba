@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marie ilutuba</title>
+    <link href="styles_üldine.css" rel="stylesheet">
+    <link href="styles_avaleht.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h1>Marie ilutuba</h1>
+
+    <div class="flexbox">
+        <div class="row">
+            <div class="column">
+                <div class="nupud1">
+                    <a href="hinnakiri.html" class="Hinnakiri">Hinnakiri</a>
+                    <a href="broneerimine.html" class="Broneeri aeg">Broneeri aeg</a>
+                </div>
+    
+                <div class="container">
+    <!--  järgnev pildigalerii koodilõik, k.a. script allpool, on võetud https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp 
+    ja veidi mugandatud, alumised thumbnailid ära jäetud.  -->
+    
+                    <div class="mySlides">
+                        <img src="pilt1.jpeg" alt="Neljajalgsed sõbrad Marie ilutoas">
+                    </div>
+    
+                    <div class="mySlides">
+                        <img src="pilt2.jpeg" alt="Avarad ruumid">
+                    </div>
+    
+                    <div class="mySlides">
+                        <img src="pilt3.jpeg" alt="Meelelahutus">
+                    </div>
+    
+                    <div class="mySlides">
+                        <img src="pilt4.jpeg" alt="Erinevad teenused ühe külastusega">
+                    </div>
+    
+                    <div class="mySlides">
+                        <img src="pilt5.webp" alt="Tippjuuksurid">
+                    </div>
+    
+                    <div class="mySlides">
+                        <img src="pilt6.jpeg" alt="Marie vastuvõtuala">
+                    </div>
+    
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+                    <!-- Image text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                    <div class="tekst">
+                        <p>Galerii</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="column">
+                <div class="nupud2">
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="https://www.tumblr.com/tagged/hairdressing?sort=top" class="fa fa-tumblr"></a>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19612.82465205774!2d-0.298220984375!3d52.08695500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877cc1573e87379%3A0x9ebca7260841aef!2sThe%20Vintage%20Avenue%20-%20Hairdresser%2C%20barbers%20and%20Beauty%20Salon%20Biggleswade!5e0!3m2!1set!2see!4v1668252391977!5m2!1set!2see"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                <div class="tekst">
+                    <p>
+                        Asume 17c High St, Biggleswade SG18 0JE
+                    </p>
+                    <br>
+                    <p>
+                        Oleme avatud E-R 9 - 18, L 10 - 12
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByTagName("img");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML =  dots[slideIndex - 1].alt;
+        }
+    </script>
+
+
+</body>
+
+</html>

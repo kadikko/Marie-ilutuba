@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Cav';
+    src: url(Caveat-VariableFont_wght.ttf)
+}
+
+body {
+    font-family: 'Cav';
+    background-image: url(natural-white-marble-texture.jpg);
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 62px;
+}
+
+.nupud1 {
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.nupud1 a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+}
