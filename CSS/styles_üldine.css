@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Cav';
-    src: url(Caveat-VariableFont_wght.ttf)
+    src: url(../Caveat-VariableFont_wght.ttf)
 }
 
 body {
     font-family: 'Cav';
-    background-image: url(natural-white-marble-texture.jpg);
+    background-image: url(../Images/natural-white-marble-texture.jpg);
     margin-left: 70px;
     margin-right: 50px;
     margin-top: 30px;
